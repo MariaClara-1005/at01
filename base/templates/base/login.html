@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <br>
+    <section class="form">
+        <div class="centralizar-texto">   
+        {% if msg %}
+            {% if msg == "Dados incorretos!" %}
+            <div class="tela">
+                <h2><p style="color: red;">{{ msg }}</p></h2>
+                <br>
+                <a href="/">tentar novamente</a>
+                <br><br>
+                {% else %}
+                <div class="tela">
+                    <h2><p style="color: rgb(42, 151, 38);">{{ msg }}</p></h2>
+                    <br>
+                    <a href="/admin">Abrir o admin</a> 
+                    <br><br>
+                    <a href="sair">Encerrar sessão</a>
+                </div>
+            </div>
+            {% endif %}
+        {% else %}
+            <form class="tela" action="" method="post">{% csrf_token %}
+                <h3>Seja bem-vindo(a) a nossa tela de login</h3><br>
+                <input name="usuario" type="text" placeholder="Login"><br><br>
+                <input name="senha" type="password" placeholder="Senha"><br><br>
+                <button><b>Entrar</b></button>
+                <br><br>
+                <a href="/cadastro"><b>Fazer o cadastro</b></a>
+            </form>
+        </div>
+    </section>
+{% endif %}
+    
+</body>
+</html>

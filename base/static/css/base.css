@@ -1,0 +1,34 @@
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2024/09/17/15/28/mountains-9053961_1280.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+section {
+    width: 30%;
+    padding-top: 10%;
+    margin: 0 auto;
+}
+.tela {
+    background-color: rgb(196, 212, 255);
+    padding: 8px;
+    border-radius: 8px;
+    margin: 0 auto;
+    text-align: center;
+}
+input {
+    padding: 8px;
+    border-radius: 2px;
+    background-color: white;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: solid blue;
+    width: 90%;
+}
+a {
+    color: rgb(15, 15, 107);
+}
+a:hover {
+    color: rgb(105, 149, 206);
+    text-decoration: none;
+}
